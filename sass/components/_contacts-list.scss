@@ -1,0 +1,32 @@
+.contacts-list {
+    @extend %list;
+
+    @media screen and (min-width: $desktop) {
+        margin-left: auto;
+        display: flex;
+    }
+}
+
+.contacts-list__item {
+    @extend %header-items;
+
+    @media screen and (min-width: $desktop) {
+        &:not(:last-child) {
+            margin-right: 50px;
+        }
+    }
+}
+
+.contacts-list__link {
+    @extend %link;
+
+    @media screen and (min-width: $desktop) {
+        @include centeredFlex;
+        padding: 32px 0;
+    }
+}
+
+.contacts-list__icon {
+    margin-right: 10px;
+    fill: currentColor;
+}

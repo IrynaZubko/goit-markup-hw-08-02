@@ -1,0 +1,29 @@
+.menu-button {
+    display: block;
+    padding: 0;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+}
+
+.menu-button__icon {
+    fill: inherit;
+}
+
+.menu-button__icon-menu {
+    .menu-button.is-open & {
+        display: none;
+    }
+}
+
+.menu-button__icon-cross {
+    display: none;
+
+    .menu-button.is-open & {
+        display: block;
+    }
+}

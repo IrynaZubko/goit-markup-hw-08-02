@@ -1,0 +1,8 @@
+.site-nav {
+    @include centeredFlex($justify-content: space-between);
+    padding: 10px 0;
+
+    // @media screen and (min-width: $tablet) {
+        
+    // }
+}
