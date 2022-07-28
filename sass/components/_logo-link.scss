@@ -17,12 +17,14 @@
     }
 }
 
+.logo-link--footer {
+    margin-bottom: 20px;
+}
+
 .logo-link__text {
     color: getColor('logo');
 }
 
 .logo-link__text--footer {
-    display: inline-block;
-    margin-bottom: 20px;
     color: getColor('primary-white');
 }

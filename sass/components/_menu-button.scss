@@ -4,6 +4,7 @@
     height: 40px;
     border: none;
     background-color: transparent;
+    z-index: 2;
 
     @media screen and (min-width: $tablet) {
         display: none;

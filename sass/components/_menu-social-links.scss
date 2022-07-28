@@ -1,0 +1,23 @@
+.menu-social-links {
+    @extend %list;
+    
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+}
+
+.menu-social-links__item {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22px;
+    letter-spacing: getLetterSpacing('accent');
+    color: getColor('button');
+
+    &:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+
+.menu-social-links__link {
+    @extend %link;
+}

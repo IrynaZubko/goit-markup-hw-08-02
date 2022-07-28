@@ -4,8 +4,8 @@
     padding-left: 15px;
     padding-right: 15px;
 
-    @media screen and (min-width: $mobile) {
-        width: $mobile;
+    @media screen and (max-width: calc($tablet - 1px)) {
+        max-width: $mobile;
     }
 
     @media screen and (min-width: $tablet) {
@@ -27,12 +27,17 @@
 
 %section-title {
     @extend %title;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     
     font-weight: 700;
-    font-size: 36px;
+    font-size: 28px;
     line-height: 1.17;
     text-align: center;
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 50px;
+        font-size: 36px;
+    }
 }
 
 %link {
@@ -68,10 +73,8 @@
 
 %header-items {
     font-weight: 500;
-    // font-size: 14px;
-    // line-height: 1.14;
     letter-spacing: getLetterSpacing('accent');
-
+    
     @media screen and (min-width: $desktop) {
         font-size: 14px;
         line-height: 1.14;

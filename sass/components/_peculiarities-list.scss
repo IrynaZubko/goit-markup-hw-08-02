@@ -9,8 +9,10 @@
 .peculiarities-list__item {
     $margin: 30px;
 
-    &:not(:last-child) {
-        margin-right: $margin;
+    @media screen and (max-width: calc($tablet - 1px)) {
+        &:not(:last-child) {
+            margin-bottom: $margin;
+        }
     }
 
     @media screen and (min-width: $tablet) and (max-width: calc($desktop - 1px)) {
@@ -19,16 +21,24 @@
 
     @media screen and (min-width: $desktop) {
         flex-basis: calc((100% - $margin * 3) / 4);
+
+        &:not(:last-child) {
+            margin-right: $margin;
+        }
     } 
 }
 
 .peculiarities-list__icon {
     @include centeredFlex;
     margin-bottom: 30px;
-    width: 270px;
+    width: 100%;
     height: 120px;
 
     background-color: getColor('bg-accent');
+
+    @media screen and (min-width: $desktop) {
+        width: 270px;
+    }
 }
 
 .peculiarities-list__title {
@@ -39,6 +49,10 @@
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
+
+    @media screen and (max-width: calc($tablet - 1px)) {
+        text-align: center;
+    }
 }
 
 .peculiarities-list__text {

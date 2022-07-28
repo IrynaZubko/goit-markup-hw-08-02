@@ -14,8 +14,10 @@
 
     $margin: 30px;
 
-    &:not(:last-child) {
-        margin-right: $margin;
+    @media screen and (max-width: calc($tablet - 1px)) {
+        &:not(:last-child) {
+            margin-bottom: $margin;
+        }
     }
 
     @media screen and (min-width: $tablet) and (max-width: calc($desktop - 1px)) {
@@ -24,6 +26,10 @@
 
     @media screen and (min-width: $desktop) {
         flex-basis: calc((100% - $margin * 3) / 4);
+
+        &:not(:last-child) {
+            margin-right: $margin;
+        }
     }  
 }
 
@@ -32,7 +38,12 @@
 }
 
 .our-team-list__card {
-    padding: 30px 32px;
+    padding-top: 30px;
+    padding-bottom: 24px;
+
+    @media screen and (min-width: $desktop) {
+        padding: 30px 32px;
+    }
 }
 
 %team-text {
