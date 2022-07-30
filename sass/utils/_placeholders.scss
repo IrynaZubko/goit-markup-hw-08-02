@@ -75,7 +75,7 @@
     font-weight: 500;
     letter-spacing: getLetterSpacing('accent');
     
-    @media screen and (min-width: $desktop) {
+    @media screen and (min-width: $tablet) {
         font-size: 14px;
         line-height: 1.14;
     }

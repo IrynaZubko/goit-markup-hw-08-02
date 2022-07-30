@@ -1,5 +1,5 @@
 .mailing-form {
-    @media screen and (max-width: calc($tablet - 1px)) {
+    @media screen and (max-width: calc($desktop - 1px)) {
         text-align: center;
     }
 
@@ -13,7 +13,7 @@
 }
 
 .mailing-form__send-block {
-    @media screen and (min-width: $tablet) {
+    @media screen and (min-width: $desktop) {
         display: flex;
         flex-direction: row;
     }
@@ -46,9 +46,14 @@
         color: getColor('contacts');
     }
 
-    @media screen and (max-width: calc($tablet - 1px)) {
+    @media screen and (min-width: $tablet) and (max-width: calc($desktop - 1px)) {
+        width: 450px;
+    }
+
+    @media screen and (max-width: calc($desktop - 1px)) {
         margin-bottom: 20px;
     }
+
     @media screen and (min-width: $desktop) {
         margin-right: 12px;
         width: 358px;

@@ -12,13 +12,18 @@
         padding: 48px 40px;
     
         background-color: getColor('primary-white');
-    
-        &.is-open {
-            display: block;
+        z-index: 50;
+
+        overflow-y: scroll;
+
+        &.menu-container--is-open {
+            display: flex;
+            flex-direction: column;
         }
     }
 
     @media screen and (min-width: $tablet) {
-        @include centeredFlex;
+        width: 100%;
+        @include centeredFlex($justify-content: space-between);
     }
 }

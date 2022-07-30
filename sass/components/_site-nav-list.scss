@@ -6,6 +6,10 @@
         flex-direction: row;
         margin-left: 93px;
     }
+
+    @media screen and (min-width: $desktop) {
+        margin-left: 88px;
+    }
 }
 
 .site-nav-list__item {
@@ -14,8 +18,6 @@
     line-height: 1.18;
     color: getColor('text-accent');
 
-    
-
     @media screen and (max-width: calc($tablet - 1px)) {
         &:not(:last-child) {
             margin-bottom: 32px;
@@ -23,6 +25,10 @@
     }
 
     @media screen and (min-width: $tablet) {
+        display: flex;
+        font-size: 14px;
+        line-height: 1.14;
+        
         &:not(:last-child) {
             margin-right: 50px;
         }

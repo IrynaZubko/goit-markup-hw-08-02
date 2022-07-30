@@ -1,8 +1,16 @@
 .peculiarities-list {
+    $margin: 30px;
     @extend %list;
 
     @media screen and (min-width: $tablet) {
         @include centeredFlex;
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: calc($desktop - 1px)) {
+        flex-wrap: wrap;
+        align-items: baseline;
+        margin-top: -$margin;
+        margin-left: -$margin;
     }
 }
 
@@ -16,7 +24,9 @@
     }
 
     @media screen and (min-width: $tablet) and (max-width: calc($desktop - 1px)) {
-        flex-basis: calc((100% - $margin) / 2);
+        margin-top: $margin;
+        margin-left: $margin;
+        flex-basis: calc((100% - $margin * 2) / 2);
     }
 
     @media screen and (min-width: $desktop) {

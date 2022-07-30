@@ -6,10 +6,3 @@
 .container {
     @extend %container;
 }
-
-.container--centered {
-    @media screen and (min-width: $desktop) {
-        @include centeredFlex;
-    }
-}
-

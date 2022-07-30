@@ -18,38 +18,67 @@
 <body>
     <!-- Header -->
     <header class="header">
-        <div class="container container--centered">
+        <div class="container">
             <!-- navigation -->
             <nav class="site-nav">
                 <!-- logo -->
                 <a href="./index.html" lang="en" class="logo-link">Web<span class="logo-link__text">Studio</span></a>
-                <!-- navigation list -->
-                <ul class="site-nav__list">
-                    <li class="site-nav__item"><a href="./index.html"
-                            class="site-nav__link">Студия</a></li>
-                    <li class="site-nav__item site-nav__item--current"><a href="./portfolio.html" class="site-nav__link">Портфолио</a></li>
-                    <li class="site-nav__item"><a href="#contacts" class="site-nav__link">Контакты</a></li>
-                </ul>
+                <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container"
+                    data-menu-button>
+                    <svg class="menu-button__icon" width="40" height="40" aria-label="Переключатель мобильного меню">
+                        <use class="menu-button__icon-cross" href="./images/icons.svg#icon-close-menu-button"></use>
+                        <use class="menu-button__icon-menu" href="./images/icons.svg#icon-menu"></use>
+                    </svg>
+                </button>
+                <div class="menu-container" id="menu-container" data-menu>
+                    <!-- navigation list -->
+                    <ul class="site-nav-list">
+                        <li class="site-nav-list__item"><a href="./index.html"
+                                class="site-nav-list__link">Студия</a></li>
+                        <li class="site-nav-list__item site-nav-list__item--current"><a href="./portfolio.html" class="site-nav-list__link">Портфолио</a>
+                        </li>
+                        <li class="site-nav-list__item"><a href="#contacts" class="site-nav-list__link">Контакты</a></li>
+                    </ul>
+                    <!-- contacts list -->
+                    <ul class="contacts-list">
+                        <li class="contacts-list__item">
+                            <a href="mailto:info@devstudio.com" class="contacts-list__link">
+                                <svg class="contacts-list__icon" width="16" height="12">
+                                    <use href="./images/icons.svg#icon-envelope"></use>
+                                </svg>
+                                info@devstudio.com
+                            </a>
+                        </li>
+                        <li class="contacts-list__item contacts-list__item--active">
+                            <a href="tel:+380961111111" class="contacts-list__link">
+                                <svg class="contacts-list__icon" width="10" height="16">
+                                    <use href="./images/icons.svg#icon-smartphone"></use>
+                                </svg>
+                                +38 096 111 11 11
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- social links list -->
+                    <ul class="menu-social-links">
+                        <li class="menu-social-links__item">
+                            <a href="https://www.instagram.com" target="_blank" rel="noreferrer noopener nofollow"
+                                class="menu-social-links__link" lang="en">Instagram</a>
+                        </li>
+                        <li class="menu-social-links__item">
+                            <a href="https://www.instagram.com" target="_blank" rel="noreferrer noopener nofollow"
+                                class="menu-social-links__link" lang="en">Twitter</a>
+                        </li>
+                        <li class="menu-social-links__item">
+                            <a href="https://www.instagram.com" target="_blank" rel="noreferrer noopener nofollow"
+                                class="menu-social-links__link" lang="en">Facebook</a>
+                        </li>
+                        <li class="menu-social-links__item">
+                            <a href="https://www.instagram.com" target="_blank" rel="noreferrer noopener nofollow"
+                                class="menu-social-links__link" lang="en">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
-            <!-- contacts list -->
-            <ul class="contacts-list">
-                <li class="contacts-list__item">
-                    <a href="mailto:info@devstudio.com" class="contacts-list__link">
-                        <svg class="contacts-list__icon" width="16" height="12">
-                            <use href="./images/icons.svg#icon-envelope"></use>
-                        </svg>
-                        info@devstudio.com
-                    </a>
-                </li>
-                <li class="contacts-list__item">
-                    <a href="tel:+380961111111" class="contacts-list__link">
-                        <svg class="contacts-list__icon" width="10" height="16">
-                            <use href="./images/icons.svg#icon-smartphone"></use>
-                        </svg>
-                        +38 096 111 11 11
-                    </a>
-                </li>
-            </ul>
         </div>
     </header>
 
@@ -220,65 +249,68 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer__container">
-            <div class="address">
-                <!-- logo -->
-                <a href="./index.html" lang="en" class="logo-link">Web<span
-                        class="logo-link__text--footer">Studio</span></a>
-                <!-- contacts -->
-                <address id="contacts" class="address__contacts">
-                    <ul class="address__list">
-                        <li class="address__item"><a href="https://goo.gl/maps/YFTjMEW9eGdTmHT36" target="_blank"
-                                rel="noreferrer noopener nofollow" class="address__link">г. Киев, пр-т Леси Украинки, 26</a>
+            <div class="footer__box">
+                <div class="address">
+                    <!-- logo -->
+                    <a href="./index.html" lang="en" class="logo-link logo-link--footer">Web<span
+                            class="logo-link__text--footer">Studio</span></a>
+                    <!-- contacts -->
+                    <address id="contacts" class="address__contacts">
+                        <ul class="address__list">
+                            <li class="address__item"><a href="https://goo.gl/maps/YFTjMEW9eGdTmHT36" target="_blank"
+                                    rel="noreferrer noopener nofollow" class="address__link">г. Киев, пр-т Леси Украинки,
+                                    26</a></li>
+                            <li class="address__item"><a href="mailto:info@devstudio.com"
+                                    class="address__link address__link--transparency">info@devstudio.com</a>
+                            </li>
+                            <li class="address__item"><a href="tel:+380961111111"
+                                    class="address__link address__link--transparency">+38
+                                    096 111 11 11</a></li>
+                        </ul>
+                    </address>
+                </div>
+                <!-- Social links -->
+                <div class="join-links">
+                    <p class="join-links__text">присоединяйтесь</p>
+                    <ul class="social-links">
+                        <li class="social-links__item">
+                            <a href="https://www.instagram.com" target="_blank" rel="noreferrer noopener nofollow"
+                                aria-label="Инстаграм" class="social-links__link social-links__link--footer">
+                                <svg class="social-links__icon" width="20" height="20">
+                                    <use href="./images/icons.svg#icon-instagram"></use>
+                                </svg>
+                                <span class="social-links__descr social-linls__descr--visually-hidden">Инстаграм</span>
+                            </a>
                         </li>
-                        <li class="address__item"><a href="mailto:info@devstudio.com"
-                                class="address__link address__link--transparency">info@devstudio.com</a>
+                        <li class="social-links__item">
+                            <a href="https://twitter.com" target="_blank" rel="noreferrer noopener nofollow"
+                                aria-label="Твиттер" class="social-links__link social-links__link--footer">
+                                <svg class="social-links__icon" width="20" height="20">
+                                    <use href="./images/icons.svg#icon-twitter"></use>
+                                </svg>
+                                <span class="social-links__descr social-linls__descr--visually-hidden">Твиттер</span>
+                            </a>
                         </li>
-                        <li class="address__item"><a href="tel:+380961111111"
-                                class="address__link address__link--transparency">+38 096 111 11 11</a></li>
+                        <li class="social-links__item">
+                            <a href="https://uk-ua.facebook.com" target="_blank" rel="noreferrer noopener nofollow"
+                                aria-label="Фейсбук" class="social-links__link social-links__link--footer">
+                                <svg class="social-links__icon" width="20" height="20">
+                                    <use href="./images/icons.svg#icon-facebook"></use>
+                                </svg>
+                                <span class="social-links__descr social-linls__descr--visually-hidden">Фейсбук</span>
+                            </a>
+                        </li>
+                        <li class="social-links__item">
+                            <a href="https://ua.linkedin.com/" target="_blank" rel="noreferrer noopener nofollow"
+                                aria-label="Линкедин" class="social-links__link social-links__link--footer">
+                                <svg class="social-links__icon" width="20" height="20">
+                                    <use href="./images/icons.svg#icon-linkedin"></use>
+                                </svg>
+                                <span class="social-links__descr social-linls__descr--visually-hidden">Линкедин</span>
+                            </a>
+                        </li>
                     </ul>
-                </address>
-            </div>
-            <!-- Social links -->
-            <div class="join-links">
-                <p class="join-links__text">присоединяйтесь</p>
-                <ul class="social-links">
-                    <li class="social-links__item">
-                        <a href="https://www.instagram.com" target="_blank" rel="noreferrer noopener nofollow"
-                            aria-label="Инстаграм" class="social-links__link social-links__link--footer">
-                            <svg class="social-links__icon" width="20" height="20">
-                                <use href="./images/icons.svg#icon-instagram"></use>
-                            </svg>
-                            <span class="social-links__descr social-linls__descr--visually-hidden">Инстаграм</span>
-                        </a>
-                    </li>
-                    <li class="social-links__item">
-                        <a href="https://twitter.com" target="_blank" rel="noreferrer noopener nofollow"
-                            aria-label="Твиттер" class="social-links__link social-links__link--footer">
-                            <svg class="social-links__icon" width="20" height="20">
-                                <use href="./images/icons.svg#icon-twitter"></use>
-                            </svg>
-                            <span class="social-links__descr social-linls__descr--visually-hidden">Твиттер</span>
-                        </a>
-                    </li>
-                    <li class="social-links__item">
-                        <a href="https://uk-ua.facebook.com" target="_blank" rel="noreferrer noopener nofollow"
-                            aria-label="Фейсбук" class="social-links__link social-links__link--footer">
-                            <svg class="social-links__icon" width="20" height="20">
-                                <use href="./images/icons.svg#icon-facebook"></use>
-                            </svg>
-                            <span class="social-links__descr social-linls__descr--visually-hidden">Фейсбук</span>
-                        </a>
-                    </li>
-                    <li class="social-links__item">
-                        <a href="https://ua.linkedin.com/" target="_blank" rel="noreferrer noopener nofollow"
-                            aria-label="Линкедин" class="social-links__link social-links__link--footer">
-                            <svg class="social-links__icon" width="20" height="20">
-                                <use href="./images/icons.svg#icon-linkedin"></use>
-                            </svg>
-                            <span class="social-links__descr social-linls__descr--visually-hidden">Линкедин</span>
-                        </a>
-                    </li>
-                </ul>
+                </div>
             </div>
             <!-- Mailing list -->
             <form class="mailing-form">
