@@ -1,7 +1,6 @@
 .regular-costumers-list {
     @extend %list;
     @include centeredFlex;
-    
 
     @media screen and (max-width: calc($desktop - 1px)) {
         flex-wrap: wrap;
@@ -51,6 +50,7 @@
     &:focus {
         color: getColor('button');
         border-color: getColor('button');
+        outline: 0px solid getColor('primary-white');
     }
 }
 

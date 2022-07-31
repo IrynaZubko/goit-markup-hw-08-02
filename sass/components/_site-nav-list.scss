@@ -19,9 +19,7 @@
     color: getColor('text-accent');
 
     @media screen and (max-width: calc($tablet - 1px)) {
-        &:not(:last-child) {
-            margin-bottom: 32px;
-        }
+        margin-bottom: 32px;
     }
 
     @media screen and (min-width: $tablet) {
