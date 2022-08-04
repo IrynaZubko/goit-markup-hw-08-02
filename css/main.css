@@ -373,8 +373,10 @@ p {
   }
 }
 
-.site-nav-list__item--current {
-  color: #2196F3;
+@media screen and (min-width: 768px) {
+  .site-nav-list__item--current {
+    color: #2196F3;
+  }
 }
 
 .site-nav-list__link {

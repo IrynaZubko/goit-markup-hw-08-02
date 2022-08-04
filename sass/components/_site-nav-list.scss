@@ -34,7 +34,9 @@
 }
 
 .site-nav-list__item--current {
-    color: getColor('button');
+    @media screen and (min-width: $tablet) {
+        color: getColor('button');
+    }
 }
 
 .site-nav-list__link {
